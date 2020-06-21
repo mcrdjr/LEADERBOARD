@@ -19,15 +19,9 @@ public class readhtml6 implements Database.Batchable<sObject>,Database.AllowsCal
             for(Sobject s : scope){
                 LeaderBoard__c dr = (LeaderBoard__c)s;
                 String requestURL;
-                //key for mcrdjr@gmail.com
-                //ak-xzh5z-8n5h7-fcs7k-680cx-75a05
-                //https://trailblazer.me/id?uid=valeriochang&cmty=trailhead
-                 requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-xzh5z-8n5h7-fcs7k-680cx-75a05/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
-              
-                //from readhtml2
-                //requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22plaintext%22}';
+                 //you'll need to get your own key
+                requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22plaintext%22}';
 
-                
                 system.debug('User: ' + dr.userid__c);
                 Http http = new Http();
                 HttpRequest req = new HttpRequest();

@@ -18,9 +18,7 @@ public class readhtml0 implements Database.Batchable<sObject>,Database.AllowsCal
             for(Sobject s : scope){
                 LeaderBoard__c dr = (LeaderBoard__c)s;
                 String requestURL;
-                //key for mcrdjr@gmail.com
-                //ak-xzh5z-8n5h7-fcs7k-680cx-75a05
-                 requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id?uid=' +  dr.userid__c + '%26cmty=trailhead%22,renderType:%22plaintext%22}';
+                requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id?uid=' +  dr.userid__c + '%26cmty=trailhead%22,renderType:%22plaintext%22}';
                 System.Debug(requestURL);
                 system.debug('User: ' + dr.userid__c);
                 Http http = new Http();

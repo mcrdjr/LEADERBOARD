@@ -27,8 +27,8 @@ public class readhtml5 implements Database.Batchable<sObject>,Database.AllowsCal
             for(Sobject s : scope){
                 LeaderBoard__c dr = (LeaderBoard__c)s;
                 String requestURL;
-                requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-z07m3-g2d2e-7s21v-j43ca-nhv2n/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
-                //requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
+                //you'll need to get your own key
+                requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
               
                 system.debug('User: ' + dr.userid__c);
                 Http http = new Http();

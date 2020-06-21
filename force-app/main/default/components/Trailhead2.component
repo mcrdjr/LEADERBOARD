@@ -1,0 +1,7 @@
+<apex:component controller="TrailheadDataController">
+<apex:repeat value="{!leaderboards}" var="lb">
+<apex:outputText value="{!lb['thdata__c']}">
+<apex:param value="{!lb['thdata__c']}" />
+</apex:outputText>
+ </apex:repeat>            
+ </apex:component>

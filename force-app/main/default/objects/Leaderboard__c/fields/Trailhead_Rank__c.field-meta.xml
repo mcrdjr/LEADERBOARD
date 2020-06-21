@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trailhead_Rank__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Badges__c &gt;= 100  &amp;&amp; TotalPoints__c &gt;= 50000, &quot;Ranger &quot; + LOTR_Rank__c,
+ IF(Badges__c &gt;= 50  &amp;&amp; TotalPoints__c &gt;= 35000, &quot;Expeditioner&quot;,
+  IF(Badges__c &gt;= 25  &amp;&amp; TotalPoints__c &gt;= 18000, &quot;Mountaineer&quot;, 
+   IF(Badges__c &gt;= 10  &amp;&amp; TotalPoints__c &gt;= 9000,  &quot;Adventurer&quot;, 
+    IF(Badges__c &gt;= 5  &amp;&amp; TotalPoints__c &gt;= 3000, &quot;Explorer&quot;, 
+     IF(Badges__c &gt;= 1  &amp;&amp; TotalPoints__c &gt;= 200, &quot;Hiker&quot;, 
+          IF(Badges__c &gt;= 0  &amp;&amp; TotalPoints__c &gt;= 0, &quot;Scout&quot;,&quot;&quot;
+     )
+     )
+    )
+   )
+  )
+ )
+)</formula>
+    <label>Trailhead_Rank</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

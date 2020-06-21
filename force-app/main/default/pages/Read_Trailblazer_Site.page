@@ -1,0 +1,50 @@
+<apex:page >
+<!--https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out_markup.htm#lightning_out_markup-->
+<!--https://www.jitendrazaa.com/blog/salesforce/use-lightning-component-in-visualforce-page/-->
+<!--https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_visualforce.htm-->
+<apex:includeLightning />
+HELLO
+    <div id="lightning"></div>
+    
+    
+    
+      <script>
+        $Lightning.use('c:ProfileApp', function() {
+          if ('true' == 'true') {
+            alert('true');
+            //uid 0051I000004Gj7DQAS - org
+            //cuid 0051I000000SUFYQA4 - org
+            //0051I000004GAwVQAW -jennifer
+            //0051I000002XMssQAG - certifiedmastercy
+            
+            var attrs = {
+              uid: '0051I000004GAwVQAW',
+              //cuid: 'false' == 'true' ?  '' : null,
+              SFID: function() { return window.SFIDWidget; },
+              //languageParam: 'en_US',
+              //thLanguage: '',
+              appLauncherLinks: JSON.parse('{"trailblazer":"https://success.salesforce.com","trailhead":"https://trailhead.salesforce.com","dreamforce":"https://www.salesforce.com/dreamforce/"}'),
+            };
+  
+            var profileData = JSON.parse("{\"profileUser\":{\"attributes\":{\"type\":\"User\",\"url\":\"/services/data/v47.0/sobjects/User/0051I000004GAwVQAW\"},\"Is_Public_Profile__c\":true,\"Id\":\"0051I000004GAwVQAW\",\"TrailblazerId__c\":\"maverick\"}}");
+
+            profileData.identity = profileData.identity ? decodeIdentity(profileData.identity) : null;
+
+            Object.keys(profileData).forEach(function(key) {
+                  if( (profileData[key] == null) ||  (profileData[key] == false) ) {
+                  } else
+                  {
+                    attrs[key] = profileData[key];
+                  }
+            });
+
+            $Lightning.createComponent('c:Profile', attrs, 'lightning', function(cmp) {
+            });
+          } 
+        });
+      </script>
+      
+      
+   
+
+</apex:page>

@@ -1,0 +1,13 @@
+<aura:component >
+
+<div class="textStyleMaker">Lightning World</div>
+
+<br/>
+
+<center>
+
+<img src="https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_lightning_experience_basics.png"/>
+
+</center>
+
+</aura:component>

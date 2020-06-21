@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOTR_Rank__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BadgesT__c &gt;=1000, &quot;(Thorongil)&quot;,
+IF(BadgesT__c &gt;=900, &quot;(Wingfoot)&quot;,
+IF(BadgesT__c &gt;=800, &quot;(Sindarin)&quot;,
+IF(BadgesT__c &gt;=700, &quot;(Telcontar)&quot;,
+IF(BadgesT__c &gt;=600, &quot;(Aragorn)&quot;,
+IF(BadgesT__c &gt;=500, &quot;(Dúnadan)&quot;,
+IF(BadgesT__c &gt;=400, &quot;(Elessar)&quot;,
+IF(BadgesT__c &gt;=300, &quot;(Elfstone)&quot;,
+IF(BadgesT__c &gt;=200, &quot;(Estel)&quot;,
+IF(BadgesT__c &gt;=100, &quot;(Strider)&quot;,
+NULL))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>LOTR Rank</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

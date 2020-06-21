@@ -1,0 +1,372 @@
+<apex:page controller="LeaderBoardController" showHeader="false" title="Trailhead Leader Board" 
+cache="false" applyHtmlTag="false">
+
+<html>
+<head>
+<meta name="google-site-verification" content="g-lVYtCwxZpQaRXB2_gau0IGt7MmzSAG3X8JEFJH2-E" />
+</head>
+</html>
+    
+<!--https://developer.salesforce.com/forums/?id=906F00000008zaMIAQ
+https://developer.salesforce.com/forums/?id=906F0000000AuGHIA0
+https://help.salesforce.com/articleView?err=1&id=sites_analytics_tracking_code.htm&siteLang=en_US&type=0&language=en_US
+-->
+
+<script>
+
+function GetIndex(index){
+      //alert('Index: ' + index);
+      //document .getElementById('pg:form:pageBlockContact:'+index+':Name}').value;
+      var data = document.getElementById('page:myform:leader_list:'+index+':header}').value;
+      alert('Data: '+ data );
+ }
+</script>
+<style>
+
+    .myTable {
+        counter-reset: rowCounter;
+    }
+    .myTable .row {
+        counter-increment: rowCounter;
+    }
+    .myTable .row .counter::before {
+        content: counter(rowCounter);
+    }
+    
+
+.value{
+background-color: #FCF7F7;}
+
+@keyframes blink {
+    0% {
+      opacity: .2;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .2;
+    }
+}
+
+.dataCell1 span {
+    animation-name: blink;
+    animation-duration: 5.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.dataCell1 span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.dataCell1 span:nth-child(3) {
+    animation-delay: .4s;
+}
+</style>
+
+<apex:form id="myForm">
+
+<apex:outputLink value="https://trailhead.salesforce.com" >
+<apex:image id="theImage1" value="{!$Resource.Trailhead_Logo}" width="150" height="60"/>
+</apex:outputLink>
+&nbsp;
+<apex:outputLink value="https://success.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F9300000009Nek&s1oid=00D300000000iTz&emkind=chatterGroupDigest&s1nid=0DB30000000072L&emtm=1468653358073&s1uid=0053000000B1Ivf&fromEmail=1&s1ext=0" >
+<apex:image id="theImage2" value="{!$Resource.TrailheadChatterGroup}" width="150" height="60"/>
+</apex:outputLink>
+&nbsp;
+<apex:outputLink value="https://developer.salesforce.com/signup" >
+<apex:image id="theImage3" value="{!$Resource.Dev}" width="150" height="60"/>
+</apex:outputLink>
+&nbsp;
+<apex:outputLink value="https://developer.salesforce.com/forums?communityId=09aF00000004HMGIA2#!/feedtype=RECENT&dc=Trailhead&criteria=ALLQUESTIONS" >
+<apex:image id="theImage4" value="{!$Resource.TrailheadDisc}" width="150" height="60"/>
+</apex:outputLink>
+ 
+
+<br></br>
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com">All Trailblazers</apex:outputLink>&nbsp;
+
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x10" 
+title="Aragorn threw back his cloak. The elven-sheath glittered as he grasped it, and the bright blade of Andúril shone like a sudden flame as he swept it out. 'Elendil!' he cried. ">
+Ranger&nbsp;x10</apex:outputLink>&nbsp;
+
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x9" 
+title="Aragorn threw back his cloak. The elven-sheath glittered as he grasped it, and the bright blade of Andúril shone like a sudden flame as he swept it out. 'Elendil!' he cried. ">
+Ranger&nbsp;x9</apex:outputLink>&nbsp;
+
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x8" 
+title="Aragorn threw back his cloak. The elven-sheath glittered as he grasped it, and the bright blade of Andúril shone like a sudden flame as he swept it out. 'Elendil!' he cried. ">
+Ranger&nbsp;x8</apex:outputLink>&nbsp;
+
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x7" 
+title="Aragorn threw back his cloak. The elven-sheath glittered as he grasped it, and the bright blade of Andúril shone like a sudden flame as he swept it out. 'Elendil!' he cried. ">
+Ranger&nbsp;x7</apex:outputLink>&nbsp;
+
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x6" 
+title="Aragorn threw back his cloak. The elven-sheath glittered as he grasped it, and the bright blade of Andúril shone like a sudden flame as he swept it out. 'Elendil!' he cried. ">
+Ranger&nbsp;x6</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x5"
+title="I am Aragorn son of Arathorn, and am called Elessar, the Elfstone, Dúnadan, the heir of Isildur Elendil's son of Gondor. Here is the sword that was broken and is forged again!">
+Ranger&nbsp;x5</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x4">Ranger&nbsp;x4</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x3">Ranger&nbsp;x3</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger_x2">Ranger&nbsp;x2</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Ranger">Ranger</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Expeditioner">Expeditioner</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Mountaineer">Mountaineer</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Adventurer">Adventurer</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Explorer">Explorer</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Hiker">Hiker</apex:outputLink>&nbsp;
+<apex:outputLink value="https://trailhead-leaderboard-developer-edition.na96.force.com/?rank=Scout">Scout</apex:outputLink>&nbsp;
+<br> - online since 8/21/2016 </br>
+<!--<b><font color='RED' size='4'><p class="dataCell1_"><span>-->
+<!--I&#39;m working on the new format for trailblazer.me ...<br></br>-->
+<!--If you don&#39;t see your name anymore, it means I only had your ID ...<br></br>-->
+<!--If you wish to continue to be on this list then please re-enter your VANITY NAME ...<br></br>-->
+<!--Note: Superbadge Count unavailable &#128542; ...<br></br>-->
+<!--I&#39;m working on the code to get as much data as possible ...<br></br>-->
+<!--Very challenging &#128528; ...<br></br>-->
+<!--https://www.quackit.com/character_sets/emoji/emoji_v3.0/unicode_emoji_v3.0_characters_all.cfm-->
+<!--</span></p></font></b>-->
+<!--https://developer.salesforce.com/forums?communityId=09aF00000004HMGIA2#!/feedtype=RECENT&dc=Trailhead&criteria=ALLQUESTIONS-->
+<!--https://success.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F9300000009Nek&s1oid=00D300000000iTz&emkind=chatterGroupDigest&s1nid=0DB30000000072L&emtm=1468653358073&s1uid=0053000000B1Ivf&fromEmail=1&s1ext=0-->
+
+  <!-- Begin Default Content REMOVE THIS -->
+  <!-- End Default Content REMOVE THIS -->
+  <!--Trailhead Module for Ref-->
+  <!--https://trailhead.salesforce.com//force_com_dev_beginner/visualforce_fundamentals/visualforce_custom_controllers-->
+  <!--https://developer.salesforce.com/forums/?id=906F0000000At5XIAS-->
+  <!--https://developer.salesforce.com/forums/?id=906F0000000At5XIAS-->
+  <!--https://developer.salesforce.com/forums/ForumsMain?id=906F0000000AsSzIAK-->
+  <!--https://developer.salesforce.com/forums/?id=906F0000000At5XIAS-->
+  <!--http://salesforce.stackexchange.com/questions/40821/use-outputlink-to-direct-to-an-accounts-page-within-inline-visualforce-page-->
+  <!--https://trailhead.salesforce.com/visualforce_fundamentals/visualforce_forms-->
+  <!--http://sfdcsrini.blogspot.com/2014/06/how-to-use-apexinputtext-in-visualforce.html-->
+  <!--animation --https://martinwolf.org/blog/2015/01/pure-css-savingloading-dots-animation-->
+  <!--http://www.redkitetechnologies.com/2013/03/floatingsticky-headers-for-visualforce-pageblocktable/-->
+  <!--https://developer.salesforce.com/forums/?id=906F0000000970EIAQ-->
+  <!--http://salesforce.stackexchange.com/questions/111919/show-row-number-in-page-block-table-->
+  <!--http://blog.jeffdouglas.com/2010/07/13/building-a-dynamic-search-page-in-visualforce/-->
+
+    &nbsp;&nbsp;
+    <apex:outputLabel value="Vanity name " />
+    <!--https://trailhead.salesforce.com/help?article=Trailhead-Vanity-URLs-->
+    <apex:inputText value="{!userid}" id="userid" label="userid"/>
+    <!--label="Missing Correct Data... ID should start with 0055 and be 18 char's long.."/>-->
+    <apex:commandButton action="{!Saveinfo}" value="Enter your VANITY NAME" title="You give your consent to display your data by clicking here..." />
+    
+    <!--<apex:commandButton value="Trailhead" action="{!URLFOR('https://trailhead.salesforce.com')}"/>-->
+    <br/>
+        &nbsp;&nbsp;
+    <apex:outputLabel value="100+ badges or 100K+ points" style="{!IF((true),"background-color: #00cc66;","")}"  />&nbsp;
+    <apex:outputLabel value="15+ Super Badges" style="{!IF((true),"background-color: #C5B358;","")}"  />&nbsp;
+    <apex:outputLabel value="Points per Badge >= 400 (Points / Badges) need to be a Ranger to be scored" style="{!IF((true),"background-color: #00cc66;","")}"  />
+    <!--<apex:inputText value="{!vanity}" id="vanity" label="vanity"/>--> 
+    <br/>
+    &nbsp;&nbsp;
+    <c:LeaderBoardTotalPoints ></c:LeaderBoardTotalPoints>
+    <br/>
+    <c:LeaderBoardTotalProfiles ></c:LeaderBoardTotalProfiles>
+    <br/>
+    <c:LeaderboardTotalBadges ></c:LeaderboardTotalBadges>
+    <br/>
+    <!--<c:LeaderBoardTotalSBadges ></c:LeaderBoardTotalSBadges>-->
+    <!--<br/>-->
+    &nbsp;&nbsp;&nbsp;<c:Trailhead2 ></c:Trailhead2>
+    &nbsp;&nbsp;&nbsp;NOTE: - Classic Reports &amp; Dashboards Specialist SB is retired&nbsp;&nbsp;
+    {!IF (leaderboards.size == 1000,'', Text(leaderboards.size) )}
+    <!--{!IF (leaderboards.size == 0, Text(leaderboards.size) , Text(leaderboards.size) )}-->
+    {!$CurrentPage.parameters.rank}{!IF (leaderboards.size == 1000,'','s')}&nbsp;
+
+    <apex:variable var="index" value="{!0}" />
+    
+    <apex:pageBlock title="Another (unofficial) Trailhead Leader Board" 
+    helpTitle="with my own LOTR Twist for RANGERS. These are some of the names for Aragorn the RANGER in LOTR" 
+    helpUrl="https://en.wikipedia.org/wiki/Aragorn" id="leader_list" >
+    <!--<b><font color='RED'>ONLY TOP 1000 Trailblazers can be shown ... click on rank above to see all for any rank up to 1000 per rank...I'm trying to figure out how to get past the collection size exceeds 1000 issue</font></b><br/>-->
+    <!--<b><font color='RED'>It may take up to 2 hours to rank you after adding your profile ID ...</font></b><br/>-->
+    <!--<b><font color='RED'>When adding your ID, make sure your profile is not hidden...I can't read it if it's hidden...</font></b><br/>-->
+    <!--<b><font color='RED'><p class="dataCell1"><span>SuperBadge Counts are off - Working on it...</span></p></font></b><br/>-->
+    <!--<c:TrailheadData componentValue=""></c:TrailheadData>-->
+        <!--<b><font color="RED"><p class="dataCell1"><span><c:LastModified ></c:LastModified></span><span></span><span></span></p></font></b>-->
+        <b><font color='RED'>None of this data will be used for ANY purpose other than displaying here - this data appears to be publically available...</font></b><br/>
+        <!--<b><font color='GREEN'><p class="dataCell1"><span>ATTENTION SALESFORCE Users - I can't see the Private SF Badges on your profile...</span></p></font></b><br/>-->
+        <b><font color='GREEN'>ATTENTION SALESFORCE Users - I can't see the Private SF Badges on your profile...</font></b><br/>
+        <apex:outputLink value="mailto:mcrdjr@sfdc2max.com">Contact...</apex:outputLink>
+        
+        <br/>
+         <!--<b><font color='RED'><p class="dataCell1"><span>I will be removing hidden entries SOON - PLEASE make sure your profile is visible or your ID will be deleted from this App ...</span></p></font></b><br/>-->
+        <apex:pageBlockSection columns="1">
+        <apex:pageMessages />
+                <apex:pageBlockTable value="{!leaderboards}" var="lbitem"  id="pbt1"  styleClass="myTable" rowClasses="row" onRowDblClick="GetIndex({!index});" >
+
+                <apex:column headerValue="Rank">
+                <span class="counter"></span>
+                <apex:variable value="{!0}" var="Total"/>
+                </apex:column>
+ 
+ <!--
+                <apex:column headerValue="Trailblazer" styleclass="Hello" id="userid__c">
+                <apex:outputLink target="_blank" value="https://trailhead.salesforce.com/users/profiles/{!lbitem.Userid__c}">
+                   {!lbitem.name}
+                </apex:outputLink>
+                </apex:column>
+-->      
+                <apex:column style="width:200px" >
+                <apex:outputLink target="_blank" value="https://trailhead.salesforce.com/users/profiles/{!lbitem.Userid__c}">
+                   {!lbitem.name}
+                </apex:outputLink>
+                <apex:facet name="header">
+                <apex:commandLink action="{! sortByName }" 
+                reRender="leader_list">Trailblazer&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+                <apex:column style="width:200px" headerValue="Rank">
+                    <apex:outputText value="{!lbitem.Trailhead_Rank__c}
+                    {!IF((lbitem.Badges__c>=1000)," x10","")} 
+{!IF((lbitem.Badges__c>=900 && lbitem.Badges__c<1000)," x9","")}  
+{!IF((lbitem.Badges__c>=800 && lbitem.Badges__c<900)," x8","")}      
+{!IF((lbitem.Badges__c>=700 && lbitem.Badges__c<800)," x7","")}                     
+{!IF((lbitem.Badges__c>=600 && lbitem.Badges__c<700)," x6","")} 
+{!IF((lbitem.Badges__c>=500 && lbitem.Badges__c<600)," x5","")} 
+{!IF((lbitem.Badges__c>=400 && lbitem.Badges__c<500)," x4","")} 
+{!IF((lbitem.Badges__c>=300 && lbitem.Badges__c<400)," x3","")} 
+{!IF((lbitem.Badges__c>=200 && lbitem.Badges__c<300)," x2","")}"/>
+                </apex:column>
+                
+                <!--
+                <apex:column style="width:200px" headerValue="Since">
+                    <apex:outputText value="{!lbitem.TrailblazerSince__c}"/>
+                </apex:column>
+                -->
+ 
+<!--
+                <apex:column headerValue="Trailblazer"  >
+                    <apex:outputLink value="{!lbitem.Profile__c}">{!lbitem.Name}</apex:outputLink>
+                </apex:column>
+-->
+                
+<!--              
+                <apex:column value="{! lbitem.Name }" style="{!IF((lbitem.Badges__c>99),"background-color: #00cc66;","")}">
+                <apex:facet name="header">
+                <apex:commandLink action="{! sortByName }" 
+                reRender="leader_list">Name&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+
+                <apex:column headerValue="Name" >
+                    <apex:outputText value="{!lbitem.Name}"/>
+                </apex:column>
+-->
+<!--
+                <apex:column headerValue="Badges">
+                    <apex:outputText value="{!lbitem.Badges__c}"/>
+                </apex:column>
+-->                
+                <apex:column value="{! lbitem.badges__c}" style="{!IF((lbitem.Badges__c>99),"width:200px;background-color: #00cc66;","")}">
+                <apex:facet name="header">
+                <apex:commandLink action="{! sortByBadges }" 
+                reRender="leader_list">Badges&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+                <!--<apex:column value="{! lbitem.superbadges__c}" style="{!IF((lbitem.SuperBadges__c>=15),"width:200px;background-color: #C5B358;","")}">-->
+                
+                
+                <apex:column value="{! lbitem.superbadges__c}" style="{!IF((lbitem.SuperBadges__c>=15),IF((lbitem.SuperBadges__c>17),"width:200px;background-color: #D2691E;","width:200px;background-color: #C5B358;"),"")}">
+ 
+                <apex:facet name="header">
+                <apex:commandLink action="{! sortBySBadges }" 
+                reRender="leader_list">SuperBadges&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+<!--                
+                <apex:column style="width:200px"  headerValue="1st Ascent Flags">
+                    <apex:outputText value="{!lbitem.First_Ascent__c}"/>
+                </apex:column>
+-->
+
+<!--
+                <apex:column headerValue="SuperBadges" style="{!IF((lbitem.SuperBadges__c>4),"#C5B358;","")}">
+                <apex:outputText value="{!lbitem.SuperBadges__c}"/>
+                </apex:column>
+-->            
+<!-- 
+                <apex:column style="width:200px" headerValue="Comm Badges">
+                    <apex:outputText value="{!lbitem.CommBadges__c}"/>
+                </apex:column>
+-->                
+                
+              
+                <apex:column value="{! lbitem.TotalPoints__c }" style="{!IF((lbitem.TotalPoints__c>100000),"width:200px;background-color: #00cc66;","")}">
+                <apex:facet name="header">
+                <apex:commandLink action="{! sortBytotalpoints }" 
+                reRender="leader_list">Total Points&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+                <apex:column value="{!lbitem.AvePoint2Badge__c}" style="{!IF((lbitem.AvePoint2Badge__c>=400),"width:200px;background-color: #00cc66;","")}">
+                <apex:facet name="header">
+                <apex:commandLink action="{!sortByScore }" 
+                reRender="leader_list">Points per Badge&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+                <!--
+                <apex:column style="width:200px"  headerValue="Trails Completed">
+                <apex:outputText value="{!lbitem.Trails__c}"/>
+                </apex:column>
+                -->
+                
+                <apex:column value="{! lbitem.Trails__c }">
+                <apex:facet name="header">
+                <apex:commandLink action="{!sortByTrails }" 
+                reRender="leader_list">Trails Completed&#8593;&#8595;
+                </apex:commandLink>
+                </apex:facet>
+                </apex:column>
+                
+                
+                
+<!--             
+                 <apex:column >
+                 <apex:inputHidden value="{!lbitem.Userid__c}" id="userid"/>
+                 <apex:commandButton id="cmdId" onclick="GetIndex('{!$Component.userid}');" value="Update"/>
+                 </apex:column>
+-->
+
+
+                
+<!--
+                <apex:column headerValue="Total Points">
+                    <apex:outputText value="{!lbitem.TotalPoints__c}"/>
+                </apex:column>
+-->
+
+                <apex:column headerValue="Certifications">
+                    <apex:outputText value="{!lbitem.Certs__c}"/>
+                </apex:column>
+                
+
+            </apex:pageBlockTable>
+
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+    <apex:pageBlock title="Status" id="debug">
+      <apex:outputText value="{!debugSoql}" />           
+    </apex:pageBlock>  
+</apex:form>
+<site:googleAnalyticsTracking />
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=4MgVtK3e-PP2XG5z-h6uFr7-af1zk7n-xr88D8kPD_8&cl=ffffff&w=a"></script>
+</apex:page>

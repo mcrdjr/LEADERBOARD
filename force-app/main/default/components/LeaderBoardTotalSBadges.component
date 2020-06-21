@@ -1,0 +1,12 @@
+<apex:component controller="LeaderBoardTotalSBadges">
+  &nbsp;&nbsp;&nbsp;Total Super Badges on this list is&nbsp;  
+
+<apex:repeat value="{!leaderboards}" var="lb">
+
+   
+<apex:outputText value="{0}">
+  <apex:param value="{!lb['tp']}" />
+</apex:outputText>
+  </apex:repeat>
+                
+  </apex:component>

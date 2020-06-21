@@ -1,0 +1,10 @@
+<apex:page controller="AccountLister">
+   <apex:form >
+        <apex:pageBlock >
+           <apex:pageBlockTable value="{!AccountMap}" var="accId">
+                <apex:column value="{!AccountMap[accId].Name}"/>
+                <apex:column value="{!AccountMap[accId]. Badges__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+  </apex:form>
+</apex:page>

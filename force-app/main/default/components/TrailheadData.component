@@ -1,0 +1,11 @@
+<apex:component controller="TrailheadData">
+<!--https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_comp_cust_elements_controllers.htm-->
+  <apex:attribute name="componentValue" description="Attribute on the component."
+                  type="String" required="required" assignTo="{!controllerValue}"/>
+    <!-- <apex:pageBlock title="Trailhead Data"> -->
+    <apex:pageBlock >
+        <!--<code>componentValue</code> is "{!componentValue}"-->
+        <!--<code>controllerValue</code> is -->
+        {!controllerValue}
+    </apex:pageBlock>
+</apex:component>

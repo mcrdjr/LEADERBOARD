@@ -1,0 +1,12 @@
+<apex:component controller="LeaderBoardTotalPoints">
+  Total Points of Trailblazers&nbsp;
+
+<apex:repeat value="{!leaderboards}" var="lb">
+
+   
+<apex:outputText value="{0}">
+  <apex:param value="{!lb['tp']}" />
+</apex:outputText>
+  </apex:repeat>
+                    
+  </apex:component>

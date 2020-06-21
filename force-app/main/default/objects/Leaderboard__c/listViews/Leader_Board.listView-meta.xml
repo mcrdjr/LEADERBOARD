@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leader_Board</fullName>
+    <columns>Userid__c</columns>
+    <columns>NAME</columns>
+    <columns>Trailhead_Rank__c</columns>
+    <columns>Rank__c</columns>
+    <columns>TotalPoints__c</columns>
+    <columns>sTotalPoints__c</columns>
+    <columns>Badges__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>TrailblazerSince__c</columns>
+    <columns>CommBadges__c</columns>
+    <columns>UrlStatus__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>SuperBadges__c</columns>
+    <columns>First_Ascent__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Leader Board</label>
+</ListView>

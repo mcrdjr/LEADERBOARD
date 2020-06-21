@@ -1,0 +1,8 @@
+<apex:page standardController="Leaderboard__c"  >
+    <apex:form >
+        <apex:inputField value="{!Leaderboard__c.Name}" />
+        <apex:inputField value="{!Leaderboard__c.Userid__c}" />                  
+<apex:commandButton action="{!save}" value="Save record"/>
+<apex:commandButton action="Cancel" value="Cancel"/>
+    </apex:form>            
+</apex:page>

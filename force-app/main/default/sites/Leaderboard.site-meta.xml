@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <analyticsTrackingCode>UA-93355345-1</analyticsTrackingCode>
+    <browserXssProtection>false</browserXssProtection>
+    <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
+    <contentSniffingProtection>false</contentSniffingProtection>
+    <cspUpgradeInsecureRequests>false</cspUpgradeInsecureRequests>
+    <description>List of Trailhead Accounts derived from :
+http://adamtoarchitect-developer-edition.na17.force.com/trailheadleaderboard/adamotest123__trailheadLeaderBoard</description>
+    <enableAuraRequests>true</enableAuraRequests>
+    <indexPage>Leader_Board</indexPage>
+    <masterLabel>Leaderboard</masterLabel>
+    <referrerPolicyOriginWhenCrossOrigin>false</referrerPolicyOriginWhenCrossOrigin>
+    <requireHttps>true</requireHttps>
+    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
+    <siteAdmin>mcrdjr+trailhead@sfdc2max.com</siteAdmin>
+    <siteGuestRecordDefaultOwner>mcrdjr+trailhead@sfdc2max.com</siteGuestRecordDefaultOwner>
+    <siteType>Visualforce</siteType>
+    <subdomain>trailhead-leaderboard-developer-edition</subdomain>
+</CustomSite>

@@ -1,0 +1,41 @@
+.THIS.textStyleMaker {
+
+-webkit-box-sizing: content-box;
+
+-moz-box-sizing: content-box;
+
+box-sizing: content-box;
+
+border: none;
+
+font: normal 76px/2 "Aclonica", Helvetica, sans-serif;
+
+color: #0096ff;
+
+text-align: center;
+
+-o-text-overflow: ellipsis;
+
+text-overflow: ellipsis;
+
+background: -webkit-repeating-radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 97%,rgba(255,255,255,1) 100%);
+
+background: -moz-repeating-radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 97%,rgba(255,255,255,1) 100%);
+
+background: repeating-radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 97%,rgba(255,255,255,1) 100%);
+
+background-position: 50% 50%;
+
+-webkit-background-origin: padding-box;
+
+background-origin: padding-box;
+
+-webkit-background-clip: border-box;
+
+background-clip: border-box;
+
+-webkit-background-size: auto auto;
+
+background-size: auto auto;
+
+}

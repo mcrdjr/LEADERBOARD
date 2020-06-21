@@ -27,10 +27,8 @@ public class readhtml2 {
         for(LeaderBoard__c nLB: workLB)
         {
             HttpRequest req = new HttpRequest();
-            //requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-z07m3-g2d2e-7s21v-j43ca-nhv2n/?request={url:%22https://trailblazer.me/id/maverick%22,renderType:%22plaintext%22}';
-            //requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-z07m3-g2d2e-7s21v-j43ca-nhv2n/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22html%22}';
-            
-            requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-z07m3-g2d2e-7s21v-j43ca-nhv2n/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22plaintext%22}';
+ 	    //you'll need to get your own key
+            requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22plaintext%22}';
             
             
             //html

@@ -20,10 +20,8 @@ public class readhtml_mcrdjr_plus_1 implements Database.Batchable<sObject>,Datab
             for(Sobject s : scope){
                 LeaderBoard__c dr = (LeaderBoard__c)s;
                 String requestURL;
-                //key for mcrdjr+1@gmail.com
-                //ak-10bx2-3e16g-yqwp8-d6s04-qram3
                 //https://trailblazer.me/id?uid=valeriochang&cmty=trailhead
-                 requestURL = 'https://phantomjscloud.com/api/browser/v2/ak-10bx2-3e16g-yqwp8-d6s04-qram3/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
+                 requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  dr.userid__c + '%22,renderType:%22plaintext%22}';
               
                 //from readhtml2
                 //requestURL = 'https://phantomjscloud.com/api/browser/v2/a-demo-key-with-low-quota-per-ip-address/?request={url:%22https://trailblazer.me/id/' +  nLB.userid__c + '%22,renderType:%22plaintext%22}';

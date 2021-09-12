@@ -14,7 +14,7 @@ I've spent literally 100's of hours working in this Org to figure Salesforce out
 
 Thanks to https://adamtoarchitect.com/ for the encouragement ...
 
-as of summer 2021 the phantomjs calls do not pull in the data any more. I;m not sure but I think it is related to shadow DOM, etc.
+as of summer 2021 the phantomjs calls do not pull in the data any more. I'm not sure but I think it is related to shadow DOM, etc.
 
 I've had to create a pure Javascript solution made of slenium, jsforce and node to update the data until the next time SF changes things again.
 

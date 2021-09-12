@@ -16,7 +16,7 @@ Thanks to https://adamtoarchitect.com/ for the encouragement ...
 
 as of summer 2021 the phantomjs calls do not pull in the data any more. I'm not sure but I think it is related to shadow DOM, etc.
 
-I've had to create a pure Javascript solution made of slenium, jsforce and node to update the data until the next time SF changes things again.
+I've had to create a pure Javascript solution made of selenium, jsforce and node to update the data until the next time SF changes things again.
 
 I'll try to put up a repo of that project once I clean some stuff up...
 
